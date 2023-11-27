@@ -5,9 +5,12 @@ body{
 header{
     background-color: #f7c331;
     background-image: url(logo.jpg);
+    background-size: 68px;
     background-position: left;
-    height: 48px;
+    background-repeat: no-repeat;
+    height: 68px;
     display: flex;
     align-items: center;
     align-content:  space-around;
+    padding-left: 70px;
 }
