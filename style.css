@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    padding:0;
+}
+header{
+    background-color: #f7c331;
+    background-image: url(logo.jpg);
+    background-position: left;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    align-content:  space-around;
+}
