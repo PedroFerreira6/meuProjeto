@@ -2,6 +2,7 @@ body{
     margin:0;
     padding:0;
     background-color:#663300;
+   
 }
 header{
     background-color: #f7c331;
@@ -16,5 +17,11 @@ header{
     padding-left: 70px;
 }
 header nav a{
-    margin-left:2%;
+    margin-left:20px;
+    text-decoration: none;
+    color:white;
+}
+header p{
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
