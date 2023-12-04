@@ -135,5 +135,7 @@ header nav a.active::before {
 
 .sobrenos{
     display: flex;
-    background-image: url();
+    background-image:url(imagens/bg-sobrenos.png);
+    background-repeat: no-repeat;
+    bac
 }
