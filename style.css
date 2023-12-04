@@ -137,5 +137,7 @@ header nav a.active::before {
     display: flex;
     background-image:url(imagens/bg-sobrenos.png);
     background-repeat: no-repeat;
-    bac
+    background-size: cover;
+    width: 100%;
+    justify-content: space-between;
 }
