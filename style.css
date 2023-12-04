@@ -16,7 +16,7 @@ header{
     align-content:flex-end;
     padding-left: 70px;
     justify-content: space-between;
-    padding-right: 70px;
+    padding-right: 40px;
 }
 header nav a{
     margin-left:20px;
