@@ -134,10 +134,10 @@ header nav a.active::before {
 }
 
 .sobrenos{
-    display: flex;
+    height: 500px;
     background-image:url(imagens/bg-sobrenos.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    justify-content: space-between;
+    align-items: center;
 }
