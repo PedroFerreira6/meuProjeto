@@ -1,3 +1,10 @@
+/* Adicione este trecho ao seu arquivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Aplique a fonte ao seu elemento desejado */
+body {
+    font-family: 'Quicksand', sans-serif;
+}
 body{
     margin:0;
     padding:0;
