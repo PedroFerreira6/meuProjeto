@@ -11,8 +11,8 @@ body{
 header{
     background-color: white;
     background-image: url(logo.png);
-    background-size: 68px;
-    background-position: left;
+    background-size: 42px;
+    background-position: 1%;
     background-repeat: no-repeat;
     height: 68px;
     display: flex;
