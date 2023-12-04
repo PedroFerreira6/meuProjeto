@@ -51,8 +51,8 @@ section{
 .image-container {
     position: relative;
     width: calc(33.333% - 1rem); /* 3 imagens por row */
+    height: auto;
     overflow: hidden;
-   
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
