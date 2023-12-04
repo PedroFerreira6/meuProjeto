@@ -1,3 +1,5 @@
 # Wildlife Photography
 Projeto de TI de Pedro Ferreira Renato Capitão e Otaniel Junior
-![Alt text](https://ibb.co/W2tnM9q) "QR Code")
+
+[<img src="https://github.com/PedroFerreira6/meuProjeto/blob/main/imagens/frame_2.png" width="250"/>](image.png)
+QR CODE
