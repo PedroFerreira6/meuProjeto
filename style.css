@@ -139,5 +139,5 @@ header nav a.active::before {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    align-items: center;
+    align-content: center;
 }
