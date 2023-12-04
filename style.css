@@ -40,3 +40,18 @@ section{
     margin-top:30px;
     
 }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery img {
+    width: calc(33.333% - 1rem); /* 3 images per row */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
