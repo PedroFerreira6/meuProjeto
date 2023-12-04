@@ -26,9 +26,12 @@ header nav a{
     margin-left:20px;
     text-decoration: none;
     color:black;
+    
 }
 
 .titulo{
     font-weight: bold;
     font-size: 19px;
+    text-decoration: none;
+    color:black;
 }
