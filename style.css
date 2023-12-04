@@ -28,7 +28,7 @@ header nav a{
     color:black;
 }
 
-header p{
+.titulo{
     font-weight: bold;
     font-size: 19px;
 }
