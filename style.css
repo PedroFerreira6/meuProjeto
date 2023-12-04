@@ -133,3 +133,7 @@ header nav a.active::before {
     transform: scaleX(1);
 }
 
+.sobrenos{
+    display: flex;
+    background-image: url();
+}
