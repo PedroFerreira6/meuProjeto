@@ -10,7 +10,7 @@ body{
 }
 header{
     background-color: white;
-    background-image: url(logo.png);
+    background-image: url(./imagens/logo.png);
     background-size: 42px;
     background-position: 1%;
     background-repeat: no-repeat;
