@@ -52,7 +52,7 @@ section{
     width: calc(33.333% - 1rem); /* 3 images per row */
     height: auto;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
