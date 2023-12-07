@@ -9,6 +9,7 @@ body{
    
 }
 header{
+    position: flex;
     background-color: white;
     background-image: url(./imagens/logo.png);
     background-size: 42px;
