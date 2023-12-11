@@ -26,8 +26,24 @@ header {
     padding: 0 25px; 
 
   }
+  
 nav{
     padding-right:3%;
+    display: none;
+}
+.icon-menu{
+  color: #000;
+  display: block;
+}
+@media screen and (min-width:800px){
+  nav{
+  display: block;
+  }
+  .icon-menu{
+    margin-right: 10px;
+    display: none;
+  }
+
 }
 
 .titulo{
