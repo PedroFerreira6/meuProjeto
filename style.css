@@ -239,3 +239,7 @@ textarea {
     text-decoration: none;
   }
   
+  .big-container{
+    display:flex;
+    justify-content: center;
+  }
