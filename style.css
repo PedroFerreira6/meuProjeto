@@ -217,7 +217,7 @@ textarea {
   }
   
   .place {
-    margin-left: 62px;
+    margin-left: 56px;
   }
   
   .phone {
@@ -225,7 +225,7 @@ textarea {
   }
   
   .gmail {
-    margin-left: 53px;
+    margin-left: 56px;
   }
   
   .contact-text a {
@@ -235,11 +235,15 @@ textarea {
   }
   
   .contact-text a:hover {
-    color: #ffffff09;
+    color: #D9D3D2;
     text-decoration: none;
   }
   
   .big-container{
     display:flex;
     justify-content: center;
+  }
+
+  .direct-contact-container{
+    align-content: center;
   }
