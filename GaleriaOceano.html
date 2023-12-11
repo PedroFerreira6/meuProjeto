@@ -1,59 +1,122 @@
 <style>
-    .gallery {
-  display: flex;
-  padding: 1px;
-  transition: 0.3s;
+ /* hide scrollbar */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
 }
 
-.gallery:hover .gallery__image {
-  filter: grayscale(1);
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+.external {
+  overflow: hidden;
+  height: 100vh;
+ 
 }
 
-.gallery__column {
+.horizontal-scroll-wrapper {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  align-items: center;
+  width: 100vh;
+  transform: rotate(-90deg) translate3d(0,-100vh,0);
+  transform-origin: right top;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  height: 100vw;
+  perspective: 1px;
+	transform-style: preserve-3d;
+  padding-bottom: 5rem;
+}
+.img-wrapper {
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  transform-origin: 50% 50%;
+  transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
+  transition: 1s;
 }
 
-.gallery__link {
-  margin: 1px;
-  overflow: hidden;
+.img-wrapper:hover {
+ min-height: 65vh;
 }
 
-.gallery__link:hover .gallery__image {
-  filter: grayscale(0);
+.slower {
+  transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
 }
-
-.gallery__link:hover .gallery__caption {
-  opacity: 1;
+.slower1 {
+  transform: rotate(90deg) translateZ(-.25px) scale(1.05) translateX(0%) translateY(8vh);
 }
-
-.gallery__thumb {
-  position: relative;
+.slower2 {
+  transform: rotate(90deg) translateZ(-.3px) scale(1.3) translateX(0%) translateY(2vh);
 }
-
-.gallery__image {
-  display: block;
-  width: 100%;
-  transition: 0.3s;
+.slower-down {
+  transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(16vh) ;
 }
-
-.gallery__image:hover {
-  transform: scale(1.1);
+.faster {
+  transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(0%) translateY(14vh) ;
 }
-
-.gallery__caption {
+.faster1 {
+  transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh) ;
+}
+.fastest {
+  transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh) ;
+}
+.vertical {
+   transform: rotate(90deg) translateZ(-.15px) scale(1.15) translateX(0%) translateY(0%) ;
+}
+.last {
+  transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh) ;
+}
+.scroll-info, header {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 25px 15px 15px;
-  width: 100%;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  color: white;
-  opacity: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-  transition: 0.3s;
+  left: 1rem;
+}
+
+.scroll-info {
+  top: 1rem;
+}
+a {
+  color: inherit;
+  font-weight: 500;
+  
+}
+h1 {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.img-wrapper a {
+  overflow: hidden;
+  display: block;
+  padding: 1vh ;
+  background: white;
+  box-shadow: 0 10px 50px #7b94f882;
+}
+img {
+  max-width: 45vh;
+  max-height: 50vh;
+  transition: .5s;
+  vertical-align: top;
+  filter: saturate(40%) sepia(30%) hue-rotate(5deg);
+}
+a:hover img {
+  filter: none;
+}
+p {
+  margin: 0;
+}
+.scroll-info {
+  display: flex;
+  align-items: center;
+}
+.icon svg {
+    width: 50px;
+    fill: currentcolor;
 }
 
 </style>
@@ -77,105 +140,83 @@
       </nav>
     </header>
     <section>
-      <h1 style="margin-top:100px; text-align: center; font-size: 40px; letter-spacing: 11px">
+      <h1 style="margin-top:50px; text-align: center; font-size: 40px; letter-spacing: 11px">
         Oceano
       </h1>
-      <br />
+
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
 
-      <div class="gallery">
-          <div class="gallery__column">
-              <a href="https://unsplash.com/@jeka_fe" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/_cvwXhGqG-o/300x300" alt="Portrait by Jessica Felicio" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Jessica Felicio</figcaption>
-                  </figure>
-              </a>
+      <div class="external">
+        <div class="horizontal-scroll-wrapper">
+          <div class="img-wrapper slower">
+            <a href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/" target="_blank" rel="noopener"><img src="./imagens/vidamarinha.jpg" alt="">
+            </a>
+          </div>
       
-              <a href="https://unsplash.com/@oladimeg" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/AHBvAIVqk64/300x500" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
-                  </figure>
-              </a>
+          <div class="img-wrapper faster">
+            <a href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/" target="_blank" rel="noopener">
+              <img src="./imagens/baleia.jpg" alt="">
+            </a>
+          </div>
       
-              <a href="https://unsplash.com/@a2eorigins" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/VLPLo-GtrIE/300x300" alt="Portrait by Alex Perez" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Alex Perez</figcaption>
-                  </figure>
-              </a>
+          <div class="img-wrapper slower vertical">
+            <a href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt="">
+            </a>
+          </div>
+      
+          <div class="img-wrapper slower slower-down">
+            <a href="https://altphotos.com/photo/swans-and-ducks-swimming-in-a-river-264/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/swanduckriver.jpg" alt="">
+            </a>
+          </div>
+      
+          <div class="img-wrapper">
+            <a href="https://altphotos.com/photo/sidewalk-terrace-of-a-blue-facade-cafe-312/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-terrace.jpg" alt="">
+            </a>
+          </div>
+      
+          <div class="img-wrapper slower">
+            <a href="https://altphotos.com/photo/paris-waterfront-at-sunset-1555/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-seine-boat.jpg" alt="">
+            </a>
+          </div>
+      
+          <div class="img-wrapper faster1">
+            <a href="https://altphotos.com/photo/old-man-leaning-over-the-barrier-looking-at-the-river-265/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/old-man-river.jpg" alt="">
+            </a>
           </div>
           
-          <div class="gallery__column">
-              <a href="https://unsplash.com/@hikiapp" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/A9rQeI2AdR4/300x300" alt="Portrait by Hikiapp" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Hikiapp</figcaption>
-                  </figure>
-              </a>
-              
-              <a href="https://unsplash.com/@von_co" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/dnL6ZIpht2s/300x300" alt="Portrait by Ivana Cajina" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Ivana Cajina</figcaption>
-                  </figure>
-              </a>
-      
-              <a href="https://unsplash.com/@j_erhunse" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/vp9mRauo68c/300x500" alt="Portrait by Jeffery Erhunse" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Jeffery Erhunse</figcaption>
-                  </figure>
-              </a>
+          <div class="img-wrapper slower slower2">
+            <a href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="">
+            </a>
           </div>
           
-          <div class="gallery__column">
-              <a href="https://unsplash.com/@marilezhava" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/Xm9-vA_bhm0/300x500" alt="Portrait by Mari Lezhava" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
-                  </figure>
-              </a>
-              
-              <a href="https://unsplash.com/@ethanhaddox" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/NTjSR3zYpsY/300x300" alt="Portrait by Ethan Haddox" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Ethan Haddox</figcaption>
-                  </figure>
-              </a>
-      
-              <a href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/2JH8d3ChNec/300x300" alt="Portrait by Amir Geshani" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Amir Geshani</figcaption>
-                  </figure>
-              </a>
+          <div class="img-wrapper">
+            <a href="https://altphotos.com/photo/street-scene-with-pedestrians-and-dogs-318/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/street-scene-people.jpg" alt="">
+            </a>
           </div>
           
-          <div class="gallery__column">
-              <a href="https://unsplash.com/@nixcreative" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/sh3LSNbyj7k/300x300" alt="Portrait by Tyler Nix" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Tyler Nix</figcaption>
-                  </figure>
-              </a>
-      
-              <a href="https://unsplash.com/@majestical_jasmin" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/OQd9zONSx7s/300x300" alt="Portrait by Jasmin Chew" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Jasmin Chew</figcaption>
-                  </figure>
-              </a>
-              
-              <a href="https://unsplash.com/@dimadallacqua" target="_blank" class="gallery__link">
-                  <figure class="gallery__thumb">
-                      <img src="https://source.unsplash.com/XZkEhowjx8k/300x500" alt="Portrait by Dima DallAcqua" class="gallery__image">
-                      <figcaption class="gallery__caption">Portrait by Dima DallAcqua</figcaption>
-                  </figure>
-              </a>
+          <div class="img-wrapper slower">
+            <a href="https://altphotos.com/photo/tourist-barge-on-the-river-seine-near-notre-dame-266/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/notre-dame-river-boat.jpg" alt="">
+            </a>
           </div>
+          
+          <div class="img-wrapper slower last">
+            <a href="https://altphotos.com/photo/skulls-decoration-in-a-shop-window-331/" target="_blank" rel="noopener">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
+            </a>
+          </div>
+        </div>
+       
       </div>
+      
+      
 
     </section>
   </body>
