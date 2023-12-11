@@ -167,6 +167,8 @@ header nav a.active::before {
   filter: brightness(100%);
 }.sobrenos div{
   width: 40%;
+}.sobrenos p{
+  font-size: 2vw;
 }
 
 
