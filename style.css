@@ -41,6 +41,12 @@ section{
     margin-top:30px;
     
 }
+.h2apresenta{
+  margin-top:100px;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 11px;
+}
 
 .gallery {
     display: flex;
@@ -139,16 +145,20 @@ header nav a.active::before {
     visibility: visible;
     transform: scaleX(1);
 }
-
+.logoapresenta{
+  height: 200px;
+  width: auto;
+  text-align: center;
+  background-image: url(imagens/logo.png);
+  background-position: center;
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
 .sobrenos{
-    background-image:url(imagens/bg-sobrenos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
 }
 
-.content1-sobrenos{
-    
-}
+
 
 /*Formulário*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
