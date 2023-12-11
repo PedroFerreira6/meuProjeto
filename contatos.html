@@ -1,9 +1,279 @@
+<style>
+  
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin:0;
+    padding:0;
+    background-color:white;
+   
+}
+header {
+    background-color: #fff;
+    background-image: url('./imagens/logo.png');
+    background-position: 1%;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 0 25px; 
+
+  }
+nav{
+    padding-right:3%;
+}
+
+.titulo{
+    
+    padding-left:3%;
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: none;
+    color:black;
+}
+section{
+    margin-top:30px;
+    
+}
+.h2apresenta{
+  margin-top:100px;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 11px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.image-container {
+    position: relative;
+    width: calc(33.333% - 1rem);
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    transform: scale(1.2);
+}
+
+/*butoões e hovers*/
+
+header nav a {
+    position: relative;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+header nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+header nav a:hover {
+    color: black; 
+}
+header nav a.active {
+    position: relative;
+    color: black;
+}
+
+header nav a.active::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+.logoapresenta{
+  height: 200px;
+  width: auto;
+  text-align: center;
+  background-image: url(imagens/logo.png);
+  background-position: center;
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+.sobrenos{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  align-items: center;
+}.sobrenos img{
+  width: 30%;
+  max-width: 30%;
+}.sobrenos div{
+  width: 30%;
+}
+
+
+
+/*Formulário*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid black;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #D9D3D2; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+/* Location, Phone, Email Section */
+.contact-list {
+    list-style-type: none;
+    margin-left: 30px;
+    padding-right: 20px;
+  }
+  
+  .list-item {
+    line-height: 4;
+    color: #000;
+  }
+  
+  .contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #000;
+  }
+  
+  .place {
+    margin-left: 56px;
+  }
+  
+  .phone {
+    margin-left: 56px;
+  }
+  
+  .gmail {
+    margin-left: 56px;
+  }
+  
+  .contact-text a {
+    color: #000;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contact-text a:hover {
+    color: #D9D3D2;
+    text-decoration: none;
+  }
+  
+  .big-container{
+    display:flex;
+    justify-content: center;
+  }
+
+  .direct-contact-container{
+    align-content: center;
+  }
+</style>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+   
     <title>Wildlife Photography</title>
 	<link rel="icon" href="/imagens/logoicon.ico" type="image/x-icon">
   </head>
