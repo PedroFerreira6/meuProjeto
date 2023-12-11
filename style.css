@@ -164,7 +164,7 @@ header nav a.active::before {
   width: 40%;
   max-width: 40%;
   border-radius: 10px;
-  filter: brightness(130%);
+  filter: brightness(100%);
 }.sobrenos div{
   width: 40%;
 }
