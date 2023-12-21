@@ -119,12 +119,29 @@ section{
     margin-top:30px;
 }
 footer{
-  
+  position: relative;
+  margin-top:100px;
+  padding: 10px;
+  height: auto;
   background-color: #000;
   color:white;
   display: flex;
   justify-content: space-around;
+} footer a{
+  color: white;
+  text-decoration: none;
+  line-height: 2;
+  font-size: 1vw;
+}footer div{
+  align-items: center;
+  text-align: center;
+}footer p{
+  font-size: 1vw;
+}footer h3{
+  font-size: 1.8vw;
 }
+
+
 .h2apresenta{
   margin-top:100px;
   text-align: center;
