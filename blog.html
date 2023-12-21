@@ -9,12 +9,14 @@
   </head>
   <body>
     <header>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <a href="index.html" class="titulo">Wildlife Photography</a>
+      <div class="icon-menu" onclick="abremenu()"><i class="material-icons">menu</i></div>
       <nav>
         <a href="index.html">Galerias</a>
-		<a href="#" class="active">Blog</a>	
-		<a href="contatos.html">Contactos</a>
-		<a href="sobre-mos.html">Sobre nós</a>
+        <a href="blog.html">Blog</a>	
+        <a href="contatos.html">Contactos</a>
+        <a href="sobre-mos.html" class="active">Sobre nós</a>
       </nav>
     </header>
     <section>
@@ -24,5 +26,20 @@
       <br />
 
     </section>
+    <div class="menuopen" id="menu">
+      <button onclick="abremenu()" ><i class="material-icons">close</i></button>
+       <div>  
+        <a href="index.html">Galerias</a>
+        <a href="blog.html">Blog</a>	
+        <a href="contatos.html">Contactos</a>
+        <a href="sobre-mos.html" class="active">Sobre nós</a>
+      </div>
+    </div>
   </body>
+  <script>
+    function abremenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </html>
