@@ -147,6 +147,13 @@ section{
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
+.fslightbox-image {
+  width:100%;
+  max-width: 80vw; 
+  max-height: 80vh; 
+  border: 2px solid #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
 
 .overlay {
     position: absolute;

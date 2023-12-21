@@ -23,11 +23,11 @@
   transform: rotate(-90deg) translate3d(0,-100vh,0);
   transform-origin: right top;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: scroll;
   padding: 0;
   height: 100vw;
   perspective: 1px;
-	transform-style: preserve-3d;
+  transform-style: preserve-3d;
   padding-bottom: 5rem;
 }
 .img-wrapper {
@@ -128,7 +128,7 @@ p {
     <link rel="stylesheet" href="style.css" />
     <title>Wildlife Photography</title>
 	<link rel="icon" href="/imagens/logoicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+  <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -150,12 +150,13 @@ p {
       <div class="external">
         <div class="horizontal-scroll-wrapper">
           <div class="img-wrapper slower">
-            <a href="./imagens/vidamarinha.jpg" data-toggle="lightbox" data-gallery="gallery"><img src="./imagens/vidamarinha.jpg" alt="">
+            <a data-fslightbox="gallery" href="./imagens/vidamarinha.jpg">
+                <img src="./imagens/vidamarinha.jpg" alt="">
             </a>
           </div>
       
           <div class="img-wrapper faster">
-            <a href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/" target="_blank" rel="noopener">
+            <a data-fslightbox="gallery" href="./imagens/baleia.jpg">
               <img src="./imagens/baleia.jpg" alt="">
             </a>
           </div>
@@ -220,11 +221,6 @@ p {
       
 
     </section>
+    <script src="./index.js"></script>
   </body>
 </html>
-<script>
-$(document).on("click", '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  });
-</script>
