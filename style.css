@@ -10,7 +10,7 @@ body{
 }
 header {
     background-color: #fff;
-    background-image: none;
+    background-image:url('./imagens/logo.png');
     background-position: 1%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -36,7 +36,7 @@ nav{
   display: block;
   cursor: pointer;
   border-radius: 5px;
-  border: solid black 1px;
+  border: 0;
   padding: 2px 7px;
   margin-right: 10%;
   background-color:white;
@@ -45,6 +45,7 @@ nav{
 }
 
 .menuopen {
+  border: 0;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -69,6 +70,7 @@ nav{
 }.menuopen a:hover {
   color: #CCCCCC;
 }.menuopen button {
+  border: 0;
   position: absolute;
   top: 28px;
   right: 8.3%;
@@ -91,7 +93,14 @@ nav{
   opacity: 1;
   visibility: visible;
 }
-
+.titulo{
+    
+    padding-left:5.5%;
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: none;
+    color:black;
+}
 
 @media screen and (min-width:800px){
   nav{
@@ -101,19 +110,12 @@ nav{
     margin-right: 10%;
     display: none;
   }
-  header{
-    background-image:url('./imagens/logo.png');
+  .titulo{
+    padding-left:3%;
   }
 }
 
-.titulo{
-    
-    padding-left:3%;
-    font-weight: bold;
-    font-size: 19px;
-    text-decoration: none;
-    color:black;
-}
+
 section{
     margin-top:30px;
     
