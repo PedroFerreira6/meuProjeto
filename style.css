@@ -10,7 +10,7 @@ body{
 }
 header {
     background-color: #fff;
-    background-image: url('./imagens/logo.png');
+    background-image: none;
     background-position: 1%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -34,16 +34,76 @@ nav{
 .icon-menu{
   color: #000;
   display: block;
+  cursor: pointer;
+  border-radius: 5px;
+  border: solid black 1px;
+  padding: 2px 7px;
+  margin-right: 10%;
+  background-color:white;
+}.icon-menu:hover{
+  background-color: #CCCCCC;
 }
+
+.menuopen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 2s ease;
+}.menuopen a {
+  line-height: 2.5;
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+}.menuopen a:hover {
+  color: #CCCCCC;
+}.menuopen button {
+  position: absolute;
+  top: 28px;
+  right: 8.3%;
+  background-color: black;
+  border: 0;
+  padding: 2px 7px;
+  border-radius: 5px;
+  color: white;
+}.menuopen button:hover {
+  background-color: #CCCCCC;
+  cursor: pointer;
+}.menuopen div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}.menuopen.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 @media screen and (min-width:800px){
   nav{
   display: block;
   }
   .icon-menu{
-    margin-right: 10px;
+    margin-right: 10%;
     display: none;
   }
-
+  header{
+    background-image:url('./imagens/logo.png');
+  }
 }
 
 .titulo{
