@@ -2,43 +2,11 @@
   
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-body{
-    font-family: 'Quicksand', sans-serif;
-    margin:0;
-    padding:0;
-    background-color:white;
-   
-}
-header {
-    background-color: #fff;
-    background-image: url('./imagens/logo.png');
-    background-position: 1%;
-    background-repeat: no-repeat;
-    background-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    width: 100%;
-    height: 48px;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    padding: 0 25px; 
 
-  }
-nav{
-    padding-right:3%;
-}
 
-.titulo{
-    
-    padding-left:3%;
-    font-weight: bold;
-    font-size: 19px;
-    text-decoration: none;
-    color:black;
-}
+
+
+
 section{
     margin-top:30px;
     
@@ -275,7 +243,7 @@ textarea {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
    
@@ -284,12 +252,14 @@ textarea {
   </head>
   <body>
     <header>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <a href="index.html" class="titulo">Wildlife Photography</a>
+      <div class="icon-menu" onclick="abremenu()"><i class="material-icons">menu</i></div>
       <nav>
         <a href="index.html">Galerias</a>
-		    <a href="blog.html">Blog</a>	
-		    <a href="#" class="active">Contactos</a>
-		    <a href="sobre-mos.html">Sobre nós</a>
+        <a href="blog.html">Blog</a>	
+        <a href="contatos.html"class="active">Contactos</a>
+        <a href="sobre-nos.html">Sobre nós</a>
       </nav>
     </header>
     <section>
@@ -318,4 +288,10 @@ textarea {
   
 
   </body>
+  <script>
+    function abremenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </html>
