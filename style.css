@@ -102,6 +102,37 @@ nav{
     color:black;
 }
 
+
+
+section{
+    margin-top:30px;
+}
+footer{
+  bottom: 0;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 150px;
+  padding: 10px;
+  height: auto;
+  background-color: #000;
+  color: white;
+  text-align: center;
+} footer a{
+  color: white;
+  text-decoration: none;
+  line-height: 2;
+  font-size: 16px;
+}footer div{
+  align-items: center;
+  text-align: center;
+}footer p{
+  font-size: 16px;
+}footer h3{
+  font-size: 20px;
+}
+
 @media screen and (min-width:800px){
   nav{
   display: block;
@@ -113,37 +144,18 @@ nav{
   .titulo{
     padding-left:3%;
   }
+  footer{
+    flex-direction: row;
 
+  }
+  footer a{
+    font-size: 14px;
+  }footer p{
+    font-size: 14px;
+  }footer h3{
+    font-size: 20px;
+  }
 }
-
-section{
-    margin-top:30px;
-}
-footer{
-  bottom: 0;
-  width: 100%;
-  position: relative;
-  margin-top:100px;
-  padding: 10px;
-  height: auto;
-  background-color: #000;
-  color:white;
-  display: flex;
-  justify-content: space-around;
-} footer a{
-  color: white;
-  text-decoration: none;
-  line-height: 2;
-  font-size: 1vw;
-}footer div{
-  align-items: center;
-  text-align: center;
-}footer p{
-  font-size: 1vw;
-}footer h3{
-  font-size: 1.8vw;
-}
-
 
 .h2apresenta{
   margin-top:100px;

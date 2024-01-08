@@ -1,3 +1,80 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.back {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-image: url('./imagens/tigrebackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  opacity: 1;
+}
+
+.back h2 {
+  margin-top: 270px;
+  font-size: 60px;
+  text-align: left;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .back {
+    height: 300px;
+    font-size: 30px; 
+  }
+
+  .back h2 {
+    margin-top: 200px; /* Adjust the margin for smaller screens */
+    font-size: 40px; /* Adjust the font size for smaller screens */
+  }
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,8 +85,8 @@
     <link rel="icon" href="/imagens/logoicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
-    <header>
+  <body style="background-color: #f1f1f1;">
+    <header style="height:60px;">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <a href="index.html" class="titulo">Wildlife Photography</a>
       <div class="icon-menu" onclick="abremenu()"><i class="material-icons">menu</i></div>
@@ -20,12 +97,48 @@
         <a href="sobre-nos.html" >Sobre nós</a>
       </nav>
     </header>
+    <div class="back">
+      <h2>Blog</h2>
+    </div>
     <section>
-      <h2 class="h2apresenta">
-        Blog
-      </h2>
+      
       <br />
-      <p>Título: A Jornada de Paz Através das Lentes da Wildlife Photography
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+          <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+          </div>
+          <div class="card">
+            <h3>Popular Post</h3>
+            <div class="fakeimg">Image</div><br>
+            <div class="fakeimg">Image</div><br>
+            <div class="fakeimg">Image</div>
+          </div>
+          <div class="card">
+            <h3>Follow Me</h3>
+            <p>Some text..</p>
+          </div>
+        </div>
+      </div>
+      <!--<p>Título: A Jornada de Paz Através das Lentes da Wildlife Photography
 
         Em meio ao caos da vida cotidiana, encontrei na fotografia da vida selvagem uma jornada transformadora. Como fotógrafo da Wildlife Photography, mergulhei na busca pela serenidade através das lentes da natureza.
         
@@ -34,7 +147,8 @@
         Cada fotografia conta a história de uma busca por momentos que transcendem a correria moderna. No entanto, a verdadeira magia está em compartilhar essas experiências. A Wildlife Photography não é apenas uma empresa, mas uma comunidade que convida a se perder nas paisagens serenas.
         
         Nossa missão vai além da documentação da vida selvagem; é sobre inspirar a preservação e oferecer a todos a chance de encontrar serenidade na beleza do mundo. Explore nossas imagens e permita-se ser transportado para um reino onde a natureza reina soberana, e a paz aguarda por aqueles que buscam através das lentes da Wildlife Photography.</p>
-    </section>
+      -->
+      </section>
     <footer>
       <div>
         <h3>Contactos</h3>
