@@ -9,13 +9,15 @@
   </head>
   <body>
     <header>
-      <a href="index.html" class="titulo">Wildlife Photography</a>
-      <nav>
-        <a href="#" class="active">Galerias</a>
-		<a href="blog.html">Blog</a>	
-		<a href="contatos.html">Contactos</a>
-		<a href="sobre-nos.html">Sobre nós</a>
-      </nav>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<a href="index.html" class="titulo">Wildlife Photography</a>
+		<div class="icon-menu" onclick="abremenu()"><i class="material-icons">menu</i></div>
+		<nav>
+		  <a href="index.html">Galerias</a>
+		  <a href="blog.html">Blog</a>	
+		  <a href="contatos.html">Contactos</a>
+		  <a href="sobre-nos.html" class="active">Sobre nós</a>
+		</nav>
     </header>
     <section>
       <h1 style="margin-top:100px; text-align: center; font-size: 40px; letter-spacing: 11px">
@@ -95,5 +97,20 @@
 		  <a href="sobre-mos.html" class="active">Sobre nós</a><br>
 		</div>
 	  </footer>
-  </body>
+      <div class="menuopen" id="menu">
+		<button onclick="abremenu()" ><i class="material-icons">close</i></button>
+		 <div>  
+		  <a href="index.html">Galerias</a>
+		  <a href="blog.html">Blog</a>	
+		  <a href="contatos.html">Contactos</a>
+		  <a href="sobre-nos.html" class="active">Sobre nós</a>
+		</div>
+	  </div>
+	</body>
+	<script>
+	  function abremenu() {
+		var menu = document.getElementById('menu');
+		menu.classList.toggle('show');
+	  }
+	</script>
 </html>
