@@ -130,16 +130,20 @@ p {
     <title>Wildlife Photography</title>
 	<link rel="icon" href="/imagens/logoicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <header>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <a href="index.html" class="titulo">Wildlife Photography</a>
+      <div class="icon-menu" onclick="abremenu()"><i class="material-icons">menu</i></div>
       <nav>
-        <a href="#" class="active">Galerias</a>
-		<a href="blog.html">Blog</a>	
-		<a href="contatos.html">Contactos</a>
-		<a href="sobre-mos.html">Sobre nós</a>
+        <a href="index.html">Galerias</a>
+        <a href="blog.html">Blog</a>	
+        <a href="contatos.html">Contactos</a>
+        <a href="sobre-nos.html" class="active">Sobre nós</a>
       </nav>
+    </header>
     </header>
     <section>
       <h1 style="margin-top:50px; text-align: center; font-size: 40px; letter-spacing: 11px">
@@ -240,5 +244,20 @@ p {
       </div>
     </footer>
     <script src="./index.js"></script>
-  </body>
+    <div class="menuopen" id="menu">
+      <button onclick="abremenu()" ><i class="material-icons">close</i></button>
+       <div>  
+        <a href="index.html">Galerias</a>
+        <a href="blog.html">Blog</a>	
+        <a href="contatos.html">Contactos</a>
+        <a href="sobre-nos.html" class="active">Sobre nós</a>
+      </div>
+      </div>
+    </body>
+    <script>
+      function abremenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+      }
+    </script>
 </html>
