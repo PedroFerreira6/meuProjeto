@@ -113,12 +113,15 @@ nav{
   .titulo{
     padding-left:3%;
   }
+
 }
 
 section{
     margin-top:30px;
 }
 footer{
+  bottom: 0;
+  width: 100%;
   position: relative;
   margin-top:100px;
   padding: 10px;

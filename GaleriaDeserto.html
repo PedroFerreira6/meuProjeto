@@ -130,16 +130,19 @@
        <title>Wildlife Photography</title>
        <link rel="icon" href="/imagens/logoicon.ico" type="image/x-icon">
      <link rel="stylesheet" href="style.css" />
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      </head>
      <body>
        <header>
-         <a href="index.html" class="titulo">Wildlife Photography</a>
-         <nav>
-           <a href="#" class="active">Galerias</a>
-           <a href="blog.html">Blog</a>	
-           <a href="contatos.html">Contactos</a>
-           <a href="sobre-mos.html">Sobre nós</a>
-         </nav>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <a href="index.html" class="titulo">Wildlife Photography</a>
+        <div class="icon-menu" onclick="abremenu()"><i class="material-icons">menu</i></div>
+        <nav>
+          <a href="index.html">Galerias</a>
+          <a href="blog.html">Blog</a>	
+          <a href="contatos.html">Contactos</a>
+          <a href="sobre-nos.html" class="active">Sobre nós</a>
+        </nav>
        </header>
        <section>
          <h1 style="margin-top:50px; text-align: center; font-size: 40px; letter-spacing: 11px">
@@ -187,26 +190,26 @@
              </div>
          
              <div class="img-wrapper faster1">
-               <a  data-fslightbox="gallery" href="./imagens/zebra.jpg" >
-                 <img class="imagens" src="./imagens/zebra.jpg">
+               <a  data-fslightbox="gallery" href="./imagens/escorpiao.png" >
+                 <img class="imagens" src="./imagens/escorpiao.png">
                </a>
              </div>
              
              <div class="img-wrapper slower slower2">
-               <a  data-fslightbox="gallery" href="./imagens/buffalo.jpg">
-                 <img class="imagens" src="./imagens/buffalo.jpg" alt="">
+               <a  data-fslightbox="gallery" href="./imagens/camaleaodeserto.jpg">
+                 <img class="imagens" src="./imagens/camaleaodeserto.jpg" alt="">
                </a>
              </div>
              
              <div class="img-wrapper">
-               <a  data-fslightbox="gallery" href="./imagens/gazela.jpg">
-                 <img class="imagens" src="./imagens/gazela.jpg" alt="">
+               <a  data-fslightbox="gallery" href="./imagens/Lizarddersto.png">
+                 <img class="imagens" src="./imagens/Lizarddersto.png" alt="">
                </a>
              </div>
              
              <div class="img-wrapper slower">
-               <a  data-fslightbox="gallery" href="./imagens/rino.jpg">
-                 <img class="imagens" src="./imagens/rino.jpg" alt="">
+               <a  data-fslightbox="gallery" href="./imagens/DesertoFINAL.jpg">
+                 <img class="imagens" src="./imagens/DesertoFINAL.jpg" alt="">
                </a>
              </div>
              
@@ -240,6 +243,21 @@
          </div>
        </footer>
        <script src="./index.js"></script>
-     </body>
+       <div class="menuopen" id="menu">
+        <button onclick="abremenu()" ><i class="material-icons">close</i></button>
+         <div>  
+          <a href="index.html">Galerias</a>
+          <a href="blog.html">Blog</a>	
+          <a href="contatos.html">Contactos</a>
+          <a href="sobre-nos.html" class="active">Sobre nós</a>
+        </div>
+        </div>
+      </body>
+      <script>
+        function abremenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+        }
+      </script>
    </html>
    
