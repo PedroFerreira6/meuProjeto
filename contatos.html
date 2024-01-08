@@ -1,181 +1,100 @@
 <style>
   
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+      /* Your responsive CSS goes here */
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-body{
-    font-family: 'Quicksand', sans-serif;
-    margin:0;
-    padding:0;
-    background-color:white;
-   
-}
-header {
-    background-color: #fff;
-    background-image: url('./imagens/logo.png');
-    background-position: 1%;
-    background-repeat: no-repeat;
-    background-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    width: 100%;
-    height: 48px;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    padding: 0 25px; 
+      section {
+        margin-top: 3%;
+      }
 
-  }
-nav{
-    padding-right:3%;
-}
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1%;
+        padding: 1%;
+        justify-content: space-around;
+      }
 
-.titulo{
-    
-    padding-left:3%;
-    font-weight: bold;
-    font-size: 19px;
-    text-decoration: none;
-    color:black;
-}
-section{
-    margin-top:30px;
-    
-}
-.h2apresenta{
-  margin-top:100px;
-  
-  text-align: center;
-  font-size: 40px;
-  letter-spacing: 11px;
-}
+      .image-container {
+        position: relative;
+        width: calc(33.333% - 1%);
+        height: auto;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: space-around;
-}
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
 
-.image-container {
-    position: relative;
-    width: calc(33.333% - 1rem);
-    height: auto;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
 
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
+      .overlay h2 {
+        color: #fff;
+        text-align: center;
+      }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
+      .image-container:hover .overlay {
+        opacity: 1;
+      }
 
-.overlay h2 {
-    color: #fff;
-    text-align: center;
-}
+      .image-container:hover img {
+        transform: scale(1.2);
+      }
 
-.image-container:hover .overlay {
-    opacity: 1;
-}
+      .logoapresenta {
+        height: 10%;
+        width: auto;
+        text-align: center;
+        background-image: url(imagens/logo.png);
+        background-position: center;
+        background-size: 5% 5%;
+        background-repeat: no-repeat;
+      }
 
-.image-container:hover img {
-    transform: scale(1.2);
-}
+      .sobrenos {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+        align-items: center;
+      }
 
-/*butoões e hovers*/
+      .sobrenos img {
+        width: 20%;
+        max-width: 20%;
+      }
 
-header nav a {
-    position: relative;
-    margin-left: 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: color 0.3s ease;
-}
-
-header nav a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-header nav a:hover::before{
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-header nav a:hover {
-    color: black; 
-}
-header nav a.active {
-    position: relative;
-    color: black;
-}
-
-header nav a.active::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-.logoapresenta{
-  height: 200px;
-  width: auto;
-  text-align: center;
-  background-image: url(imagens/logo.png);
-  background-position: center;
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.sobrenos{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 100px;
-  align-items: center;
-}.sobrenos img{
-  width: 30%;
-  max-width: 30%;
-}.sobrenos div{
-  width: 30%;
-}
-
+      .sobrenos div {
+        width: 20%;
+      }
 
 
 /*Formulário*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-
-form { max-width:420px; margin:50px auto; }
+.form-container {
+  min-width: 50%;
+  
+}
+form { 
+  
+  max-width:420px;
+   }
 
 .feedback-input {
   color:black;
@@ -189,12 +108,13 @@ form { max-width:420px; margin:50px auto; }
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
+  min-width: 70%;
   width:100%;
   box-sizing: border-box;
   outline:0;
 }
 
-.feedback-input:focus { border:2px solid #D9D3D2; }
+.feedback-input:focus { border:2px solid #CC4949; }
 
 textarea {
   height: 150px;
@@ -261,13 +181,27 @@ textarea {
   }
   
   .big-container{
+    
     display:flex;
     justify-content: center;
-    align-items: start;
+    
   }
 
   .direct-contact-container{
     align-content: center;
+  }
+
+
+  @media screen and (max-width: 800px){
+    .big-container{
+      flex-direction: collum;
+      align-items: center;
+
+    }
+
+    .direct-contact-container{
+      margin-top: 3%;
+    }
   }
 </style>
 <!DOCTYPE html>
@@ -275,7 +209,7 @@ textarea {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
    
@@ -284,16 +218,18 @@ textarea {
   </head>
   <body>
     <header>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <a href="index.html" class="titulo">Wildlife Photography</a>
+      <div class="icon-menu" onclick="abremenu()"><i class="material-icons">menu</i></div>
       <nav>
         <a href="index.html">Galerias</a>
-		    <a href="blog.html">Blog</a>	
-		    <a href="#" class="active">Contactos</a>
-		    <a href="sobre-mos.html">Sobre nós</a>
+        <a href="blog.html">Blog</a>	
+        <a href="contatos.html"class="active">Contactos</a>
+        <a href="sobre-nos.html">Sobre nós</a>
       </nav>
     </header>
     <section>
-      <h2 class="h2apresenta">Contactos</h2>
+      <h1 class="h2apresenta">Contactos</h2>
     </section>
     <div class="big-container">
       <div class="form-container">
@@ -315,7 +251,21 @@ textarea {
         </ul>
 
     </div>
-  
-
+    </div>
+    <div class="menuopen" id="menu">
+      <button onclick="abremenu()" ><i class="material-icons">close</i></button>
+       <div>  
+        <a href="index.html">Galerias</a>
+        <a href="blog.html">Blog</a>	
+        <a href="contatos.html">Contactos</a>
+        <a href="sobre-nos.html" class="active">Sobre nós</a>
+      </div>
+    </div>
   </body>
+  <script>
+    function abremenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </html>
