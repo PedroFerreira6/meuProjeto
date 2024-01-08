@@ -130,6 +130,7 @@
        <title>Wildlife Photography</title>
        <link rel="icon" href="/imagens/logoicon.ico" type="image/x-icon">
      <link rel="stylesheet" href="style.css" />
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      </head>
      <body>
        <header>
@@ -242,6 +243,21 @@
          </div>
        </footer>
        <script src="./index.js"></script>
-     </body>
+       <div class="menuopen" id="menu">
+        <button onclick="abremenu()" ><i class="material-icons">close</i></button>
+         <div>  
+          <a href="index.html">Galerias</a>
+          <a href="blog.html">Blog</a>	
+          <a href="contatos.html">Contactos</a>
+          <a href="sobre-nos.html" class="active">Sobre nós</a>
+        </div>
+        </div>
+      </body>
+      <script>
+        function abremenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+        }
+      </script>
    </html>
    
