@@ -183,6 +183,7 @@ textarea {
   .big-container{
     
     display:flex;
+    align-items: center;
     justify-content: center;
     
   }
@@ -194,7 +195,7 @@ textarea {
 
   @media screen and (max-width: 800px){
     .big-container{
-      flex-direction: column;
+      
       display: block;
       align-items: center;
       justify-content: center;
@@ -211,7 +212,10 @@ textarea {
 
     }
     .form-container{
-      
+      padding-left: 15%;
+    }
+    [type="submit"]{
+      width: 80%;
     }
   }
 </style>
