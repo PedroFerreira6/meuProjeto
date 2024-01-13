@@ -53,15 +53,32 @@
   width: 100%;
   padding: 20px;
 }
+/* Add a card effect for articles */
+.card_left {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;  
+}
+.card_rigth {
+   background-color: white;
+   padding: 20px;
+   margin-top: 10%;  
+  
+   
+}
 
 .img1 {
   background-image: url('./imagens/tiger.jpg');
-  width: 100%;
+  background-size: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
   padding: 20px;
+  
 }
 .img2 {
-  background-image: url('./imagens/tigrebackground.jpg');
-  width: 100%;
+  background-image: url('./imagens/photographer.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
   padding: 20px;
 }
 .img3 {
@@ -75,12 +92,7 @@
   padding: 20px;
 }
 
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-}
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -126,14 +138,14 @@
       <br />
       <div class="row">
         <div class="leftcolumn">
-          <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
+          <div class="card_left">
+            <h2>Sobre o meu trabalho</h2>
+            <h5>Vou falar mais sobre o que eu faço, Jan 12, 2024</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <p>Sobre o meu trabalho..</p>
+            <p>Bem-vindo ao meu universo fotográfico! Sou Ruben Pereira, o olhar por trás das lentes na Wildlife Photography, e estou empolgado por compartilhar um pouco sobre minha paixão por capturar a essência única do mundo corporativo.</p>
           </div>
-          <div class="card">
+          <div class="card_left">
             <h2>TITLE HEADING</h2>
             <h5>Title description, Sep 2, 2017</h5>
             <div class="fakeimg" style="height:200px;">im</div>
@@ -142,21 +154,19 @@
           </div>
         </div>
         <div class="rightcolumn">
-          <div class="card">
-            <h2>About Me</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+          <div class="card_rigth">
+            <h2>Sobre mim</h2>
+            <div class="img2" style="height:400px;"></div>
+            <p style="font-weight:bold ;">
+              Ruben Pereira, fotógrafo de vida selvagem, explora os lugares mais remotos para capturar a essência da natureza. Suas imagens, fruto de paciência e talento,
+               narram a diversidade e urgência da conservação ambiental, provocando um profundo respeito pelo nosso planeta.</p>
+            
           </div>
-          <div class="card">
-            <h3>Popular Post</h3>
-            <div class="img1">Image</div><br>
-            <div class="fakeimg">Image</div><br>
-            <div class="fakeimg">Image</div>
+          <div class="card_rigth">
+            <h3>Melhor Foto</h3>
+            <div class="img1"></div><br>
           </div>
-          <div class="card">
-            <h3>Follow Me</h3>
-            <p>Some text..</p>
-          </div>
+ 
         </div>
       </div>
       <!--<p>Título: A Jornada de Paz Através das Lentes da Wildlife Photography
